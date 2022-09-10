@@ -2,7 +2,7 @@
 body {
     margin: 0;
     padding: 0;
-   
+   background-color: rgb(255, 255, 255);
 }
 
 /* ---- Final Body ---- */
@@ -12,7 +12,11 @@ nav  {
     justify-content: center;
     height: 70px;
     width: 100%; 
-    background-color: #00036B; 
+    position: fixed; 
+    box-shadow: 5px 5px 5px 5px #00000071;
+    -webkit-backdrop-filter:blur(15px);
+    backdrop-filter:blur(15px);
+    background-color: rgba(34, 95, 226, 0.377);
 }
 .logoImagen {
     width: 80px;
@@ -57,6 +61,46 @@ li {
     background-position: center;
     background-repeat: no-repeat;
 }
+
+.slider {
+ width: 95%;
+ margin: auto;
+ overflow: hidden;
+}
+
+.slider ul {
+    display: flex;
+    padding: 0;
+    width: 400%;
+
+    animation: cambio 20s infinite alternate; 
+}
+
+.slider li {
+    width: 100%;
+    list-style: none;
+
+}
+
+.slider img {
+    width: 100%;
+}
+
+@keyframes cambio {
+    0% { margin-left: 0; }
+    20% { margin-left: 0; }
+
+    25% { margin-left: -100%; }
+    45% { margin-left: -100%; }
+
+    50% {margin-left: -200%;}
+    70% {margin-left: -200%;}
+
+    75% {margin-left: -200%;}
+    100% {margin-left: -300%;}
+
+}
+
 .titleHome {
     font-family: 'Nunito', sans-serif;
     font-size: 48px;
@@ -80,7 +124,7 @@ li {
     border-radius: 10px;
     padding: 15px 30px;
     margin:  auto;
-    margin-top: 50px;
+    margin-top: 10px;
 }
 
 
@@ -118,6 +162,7 @@ li {
 }
 
 .botonSupp {
+    display: block;
     width: 100px;
     text-decoration: none;
     background-color: aqua;
@@ -126,5 +171,244 @@ li {
     border-radius: 10px;
     padding: 15px 30px;
     margin:  auto;
+    margin-top: 10px;
+}
+
+
+/* ---- CardsRopa ---*/
+
+#ropaXpower {
+    padding: 8%;
+    margin: 0;
+    background: url(/assets/background-ropa-xpower.png);   
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.titleXpower {
+    text-align: center;
+
+    font-family: "DynaPuff", cursive;
+    font-size: 40px;
+    color: #ffffff;
+    font-weight: 100;
+}
+
+.cardsHombreMujer {
+    width: 100%;
+    max-width: 1200px;
+    height: 430px;
+    margin: auto;
+    display: flex;  
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.cardsHombreMujer .card {
+    width: 330px;
+    height: 480px;
+    border-radius: 8px;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    margin: 20px;
+    text-align: center;
+    transition: all 0.25s;
+    background-color:rgba(53, 240, 224, 0.384);
+}
+
+.cardsHombreMujer .card:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);
+}
+
+.cardsHombreMujer .card img {
+    width: 330px;
+    height: 350px;
+    margin: 0;
+    border-radius: 8px;
+}
+
+.cardsHombreMujer .card h2{
+    font-weight: 600;
+    font-family: 'Courier New', Courier, monospace ;
+}
+
+.cardsHombreMujer .card p{
+    padding: 0 1rem;
+    font-size: px;
+    font-weight: 300;
+}
+
+.cardsHombreMujer .card a{
+    font-weight: 800;
+    font-size: 25px;
+    text-decoration: none;
+    color: #313131;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.cardsHombreMujer .card a:hover{
+    color: black;
+}
+
+/* ---- CardsImplementos ---*/
+
+#implementos {
+    padding: 8%;
+    margin: 0;
+    background: url(/assets/background-implementos-para-entrenar-arjuna\ \(1920\ ×\ 1080\ px\).gif);   
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.titleImplementos {
+    text-align: center;
     margin-top: 50px;
+    margin-bottom: 50px;
+    font-family: "DynaPuff", cursive;
+    font-size: 40px;
+    color: #ffffff;
+    font-weight: 100;
+}
+
+.cardsImplementos {
+    width: 100%;
+    max-width: 1200px;
+    height: 430px;
+    margin: auto;
+    display: flex;  
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.cardsImplementos .card {
+    width: 180px;
+    height: 280px;
+    border-radius: 8px;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    margin: 20px;
+    text-align: center;
+    transition: all 0.25s;
+    -webkit-backdrop-filter:blur(15px);
+    backdrop-filter:blur(15px);
+    background-color: rgba(145, 146, 146, 0.336);
+}
+
+.cardsImplementos .card:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);
+}
+
+.cardsImplementos .card img {
+    width: 180px;
+    height: 200px;
+    margin: 0;
+    border-radius: 8px;
+}
+
+.cardsImplementos .card h2{
+    font-size: 20px;
+    font-weight: 600;
+    font-family: 'Courier New', Courier, monospace ;
+}
+
+.cardsImplementos .card p{
+    padding: 0 1rem;
+    font-size: px;
+    font-weight: 300;
+}
+
+.cardsImplementos .card a{
+    font-weight: 800;
+    font-size: 15px;
+    text-decoration: none;
+    color: #313131;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.cardsImplementos .card a:hover{
+    color: black;
+}
+
+/* ---- Inicio section tranquilos  --- */
+
+#entrenaAhora {
+    padding: 10%;
+    margin: 0;
+    background: url(/assets/background-entrena-con-nosotros.png);   
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+.entrena {
+    width: 1000px;
+    height: 400px;
+    padding: 5%;
+    border-radius: 20px;
+    margin: 0;  
+    display: flex;
+    justify-content: center;
+    -webkit-backdrop-filter:blur(15px);
+    backdrop-filter:blur(15px);
+    background-color: rgba(145, 146, 146, 0.336);
+}
+
+
+.titleEntrena {
+    width: 70%;
+    font-family: "DynaPuff", cursive;
+    font-size: 28px;
+    color: #242424;
+}
+
+.subtitleEntrena {
+    width: 70%;
+    margin: 5px;
+    font-family: "DynaPuff", cursive;
+    font-size: 15px;
+    color: #242323;
+}
+.entrena .card {
+    width: 70%;
+}
+
+.sliderEntrena {
+    width: 70%;
+    margin: 0%;
+    overflow: hidden;
+}
+    
+.sliderEntrena ul {
+        display: flex;
+        padding: 0;
+        width: 400%;
+        animation: cambio 20s infinite alternate; 
+}
+
+.sliderEntrena li {
+        width: 100%;
+        list-style: none;
+}
+    
+.sliderEntrena img {
+        width: 100%;
+        border-radius: 10px;
+}
+    
+@keyframes cambio {
+        0% { margin-left: 0; }
+        20% { margin-left: 0; }
+   
+        25% { margin-left: -100%; }
+        45% { margin-left: -100%; }
+   
+        50% {margin-left: -200%;}
+        70% {margin-left: -200%;}
+   
+        75% {margin-left: -200%;}
+        100% {margin-left: -300%;}
+   
 }
